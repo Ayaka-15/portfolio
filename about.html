@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <!-- meta viewport Googleは現時点でこちらの記述を推奨 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- WebFont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <!-- gsapを使うためのファイルを読み込み -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <!-- スライダー用のcss -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/style_about.css">
+    <title>AYAKA NAKAJO</title>
+  </head>
+  <body class="aboutPage">
+    <header>
+      <h1>ABOUT</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">WORKS</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="innerWrap_about"> 
+        <h2>AYAKA NAKAJO</h2>
+        <ul class="slider">
+          <li><div class="sliderPicture"><img src="images/slider_01.jpeg" alt=""></div><div class="sliderCaption">My name is Ayaka.</div></li>
+          <li><img src="images/slider_02.jpg" alt=""><div class="sliderCaption">I am a web developer & digital marketer.</div></li>
+          <li><img src="images/slider_03.jpg" alt=""><div class="sliderCaption">I like sushi.</div></li>
+          <li><img src="images/slider_04.jpg" alt=""><div class="sliderCaption">I like coffee.</div></li>
+          <li><img src="images/slider_05.jpg" alt=""><div class="sliderCaption">I like traveling.</div></li>
+          <li><img src="images/slider_06.jpg" alt=""><div class="sliderCaption">I like walking.</div></li>
+        </ul>
+        <h2>MY HISTORY</h2>
+        <ul class="timeline">
+          <li><!--線が伸びる基準となるHTML。liを基準として、spanに指定された線を伸ばします。-->
+            <!-- カード出現の範囲をdivタグで囲む -->
+            <div class="historyCard">
+              <!-- 画像と文章を横並びにするために各要素をdivで囲む -->
+              <div>
+                <img class="myHistoryPhoto" src="images/my_history_01.jpg" alt="Japan">
+              </div>
+              <div>
+                <dl>
+                <dt>BIRTH</dt>
+                <dd>
+                  I was born in Nagano, Japan.<br/>
+                  I was a kid who loved music and reading.
+                </dd>
+                </dl>
+              </div>
+            </div>
+            <span class="border-line"></span>
+          </li>
+          <li>
+            <div class="historyCard">
+              <div>
+                <dl>
+                <dt>STARTED MY CAREER</dt>
+                <dd>
+                  I joined an IT company and worked as a system engineer.<br/>
+                  I developed websites and data integration systems.<br/>
+                  I became the development manager for the project and managed the development team.
+                </dd>
+                </dl>
+              </div>
+              <div>
+                <img class="myHistoryPhoto" src="images/my_history_02.jpg" alt="Computer">
+              </div>
+            </div>
+            <span class="border-line"></span>
+          </li>
+          <li>
+            <div class="historyCard">
+              <div>
+                <img class="myHistoryPhoto" src="images/my_history_03.jpg" alt="Canada">
+              </div>
+              <div>
+                <dl>
+                <dt>MOVED TO CANADA</dt>
+                <dd>
+                  To further increase my skills as a developer, I moved to Canada to study digital marketing.
+                </dd>
+                </dl>
+              </div>
+            </div>
+            <span class="border-line"></span>
+          </li>
+        </ul>
+        <h2>SKILLS</h2>
+        <div class="innerWrap_skills"> 
+          <ul class="skills">
+            <li class="skillTitle" id="webDevelopment">WEB DEVELOPMENT</li>
+            <li>・JavaScript/jQuery</li>
+            <li>・HTML5/CSS3</li>
+            <li>・MySQL</li>
+            <li>・PHP</li>
+            <li>・Photoshop</li>
+            <li>・Illustrator</li>
+            <li>・WordPress</li>
+          </ul>
+          <ul class="skills">
+            <li class="skillTitle" id="digitalMarketing">DIGITAL MARKETING</li>
+            <li>・Video editing</li>
+            <li>・Copywriting</li>
+            <li>・Google Analytics</li>
+            <li>・Google Tag Manager</li>
+          </ul>
+          <ul class="skills">
+            <li class="skillTitle" id="others">OTHERS</li>
+            <li>・Teamwork</li>
+            <li>・Management</li>
+          </ul>
+        </div>
+      </div> 
+    </main>
+    <footer>
+      <p>Made by AYAKA NAKAJO 2024</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/about.js"></script>
+  </body>
+</html>

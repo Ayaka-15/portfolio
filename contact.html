@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <!-- meta viewport Googleは現時点でこちらの記述を推奨 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- WebFont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/style_contact.css">
+    <script src="js/contact.js"></script>
+    <title>AYAKA NAKAJO</title>
+  </head>
+  <body class="contactPage">
+    <header>
+      <h1>CONTACT</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">WORKS</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="innerWrap_contact"> 
+        <h3>If you are interested in working with me, please get in touch.</h3>
+        <!-- JavaScriptのonsubmitとは、送信ボタンが押された時に起動するイベント -->
+        <!-- formタグに、onsubmitを追加して起動する関数を指定することで送信前の内容のチェックや確認に使用することが可能。
+             preventDefault()と一緒に使用して、フォームの送信イベントをキャンセルするといった使い方もします。 -->
+        <form action="php/contact.php" method="post" name="form" id="contactForm" onSubmit="return formCheck()">
+          <div class="contactFormItem">
+              <label for="name">NAME</label>
+              <input type="text" id="name" name="name">
+          </div>
+          <div class="contactFormItem">
+              <label for="email">MAIL ADRESS</label>
+              <input type="text" id="email" name="email">
+          </div>
+          <div class="contactFormItem">
+              <label for="message">MESSAGE</label>
+              <textarea id="message" name="message"></textarea>
+          </div class="contactButton">
+          <div class="contactFormItem">
+            <p class="contactButton"><input class="sendButton" type="submit" value="SEND"></p>
+          </div>
+          <div id="messageArea">
+            <div id="errMessage"></div>
+            <div id="compMessage"></div>
+            <script>
+              function getParam(){
+	              // URLパラメータ文字列を取得する
+	              var param = location.search;
+                //送信完了のパラメータが取得できたら送信完了メッセージを表示
+                if(param !=""){
+                  var target_compMessage = document.getElementById("compMessage");
+                  target_compMessage.innerHTML = "Message has been sent successfully.";
+                  // URLを取得
+                  const url = new URL(window.location.href);
+                  // URLからGETパラメータを削除
+                  history.replaceState('', '', url.pathname);
+                  //<div class="messageArea">要素の表示位置に自動スクロール
+                  var target = document.getElementById("messageArea");
+                  target.scrollIntoView(false);
+                }
+              }
+              getParam();
+            </script>
+          </div>
+        </form>
+      </div> 
+    </main>
+    <footer>
+      <p>Made by AYAKA NAKAJO 2024</p>
+    </footer>
+  </body>
+</html>
