@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+/* ヘッダー(P162) */
+header{
+    /* vw,vhは、ビューポートのサイズを基準とした単位(Webサイトの表示領域のこと) */
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Quicksand', sans-serif;
+}
+/* グローバルナビゲーションを固定配置にする(P168) */
+header nav{
+    /* position: fixed;はスクロールしても要素がその場所に固定される */
+    position: fixed;
+    top: 0;
+    /* left: 35vw; */
+    right: 4.5vw;
+    line-height: 4.5vw;
+    z-index: 100; /* ナビゲーションが上に表示されるように重なり方を指定(P170) */
+    width: 30%;
+    margin-top: 25px;
+}
+header nav ul{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.55vw;
+    font-weight: 700;
+    color: #954e33;
+    letter-spacing: .1em;
+}
+header nav ul li a:hover{
+    /* 線の色、太さもここに書ける */
+    text-decoration: underline;
+}
+body{
+    /* 仮置き */
+/* font-size: 1.5vw; */
+font-family: 'Quicksand', sans-serif;
+background-color: #EDE4E1;
+}
+footer{
+    background-color: #ccc4c2 ;
+    height: 15.0vh;
+}
+footer p{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.0vw;
+    text-align: center;
+    padding-top: 3.0vw;
+}

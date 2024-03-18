@@ -1,0 +1,225 @@
+@charset "utf-8";
+
+header{
+    background: url(../images/header_about.jpg) no-repeat left center/cover;
+}
+h1{
+    position: absolute;
+    top: 46vh;
+    left: 44.5vw;
+    text-align: center;
+    font-size: 2.7vw;
+    letter-spacing : 0.07em;
+}
+.introduce{
+	width: 60vw;
+	margin: 0 auto;
+}
+.introduce div{
+	display: inline-block;
+	vertical-align: middle;
+
+}
+.myPhoto{
+    width: 15vw;
+}
+h2{
+    text-align: center;
+    font-size: 2.0vw;
+    margin: 60px 0 40px;
+}
+.innerWrap_skills{
+	width: 75vw;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto 150px;
+}
+.skills{
+	width: 20vw;
+	height: 50vh;
+	background-color: #ffffff;
+	padding-left: 1.75vw;
+}
+.skills li{
+	font-size: 1.15vw;
+	margin: 15px;
+}
+.skills .skillTitle{
+	font-size: 1.5vw;
+	font-weight: bold;
+	margin-bottom: 25px;
+	padding-top: 8px;
+}
+#webDevelopment{
+	text-decoration: underline #fa8d94 0.7vw;
+}
+#digitalMarketing{
+	text-decoration: underline #954e33 0.7vw;
+}
+#others{
+	text-decoration: underline #9dc357 0.7vw;
+}
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+    /* width:94%; */
+	width:70%;
+    margin:0 auto;
+}
+
+.slider img {
+    /*width:60vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
+	width:20vw;
+    height:auto;
+	/* 写真同士の間隔 */
+	margin: 0 10vw;
+}
+
+.slider .slick-slide {
+	transform: scale(0.8);/*左右の画像のサイズを80%に*/
+	transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
+	opacity: 0.5;/*透過50%*/
+}
+
+.slider .slick-slide.slick-center{
+	transform: scale(1);/*中央の画像のサイズだけ等倍に*/
+	opacity: 1;/*透過なし*/
+	/* width: 50vw; */
+}
+
+.slider .sliderPicture{
+	position: relative;        /* 位置指定 */
+    z-index: 10;                /* 重なり順指定 */
+}
+
+.slider .sliderCaption{
+    position: absolute;        /* 位置指定 */
+    top: 19.5vw;                  /* 位置指定 */
+    left: 15vw;                /* 位置指定 */
+    z-index: 100;               /* 重なり順指定 */
+	transform: rotate(-11deg);	/* テキストの傾き */
+	font-family: 'Bad Script', cursive;
+	font-size: 2.1vw;
+	width: 21vw;
+	/* height: 5vh; */
+	/* background-color: #f6bfbc; */
+	background-color: #EE869A;
+	/* color: #ffffff; */
+	text-align: center;
+}
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+    position: absolute;/*絶対配置にする*/
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #666;/*矢印の色*/
+    border-right: 2px solid #666;/*矢印の色*/
+    height: 15px;
+    width: 15px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+    left: -1.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+    right: -1.5%;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+    text-align:center;
+	margin:20px 0 0 0;
+}
+
+.slick-dots li {
+    display:inline-block;
+	margin:0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width:8px;/*ドットボタンのサイズ*/
+    height:8px;/*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    background:#ccc;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+    background:#333;/*ドットボタンの現在地表示の色*/
+}
+
+/*==================================================
+タイムラインのためのcss
+===================================*/
+
+/*タイムライン全体の設定*/
+.timeline{
+	max-width: 1000px;
+	width: 100%;
+	margin: 50px auto;
+	padding: 0 30px;
+}
+
+.timeline li{
+    /*線の起点とするためrelativeを設定*/
+    position: relative;
+	list-style: none;
+	padding: 0 0 55px 0;
+}
+
+.timeline dl{
+	margin: 0 0 20px 3em;
+}
+
+/*絶対配置で線を設定*/
+.border-line {
+    /*線の位置*/
+	position: absolute;
+	left: 0.2em;
+	top: 0;
+	width: 7px;/*線の太さ*/
+	height: 0;/*はじめは高さを0に*/
+	background: #ccc;
+}
+
+/*タイムラインの見出し横の丸の位置と形状*/
+.timeline li::after{
+	content:'';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 15px;
+	height: 15px;
+	background:#666;
+	border-radius: 50%;
+}
+
+.timeline img{
+	width: 30vw;
+	padding-left: 50px;
+}
+.timeline div{
+	display: inline-block;
+	vertical-align: middle;
+}
+.timeline dt{
+	font-size: 1.5vw;
+	margin-bottom: 11px;
+}
+.timeline dd{
+	font-size: 1.2vw;
+	line-height: 2.0em;
+	width: 400px;
+}

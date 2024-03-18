@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+/* Header(P162) */
+header{
+    background: url(../images/header_main.jpg) no-repeat left center/cover;
+}
+h1{
+    position: absolute;
+    top: 46vh;
+    left: 39vw;
+    text-align: center;
+    font-size: 2.7vw;
+    letter-spacing : 0.07em;
+}
+h1 div{
+    font-size: 1.4vw;
+    margin-top: 10px;
+}
+/* Body */
+.innerWrap_works{
+    width: 82vw;
+    /* margin: autoで端に余白が取られる */
+    margin: 0 auto;
+}
+h2{
+    text-align: center;
+    font-size: 2.0vw;
+    margin: 60px 0 40px;
+}
+/* フレックスボックスデザイン(P743) */
+.workList{
+    display: flex;
+    flex-wrap: wrap;
+    /* Flexbox(P113) */
+    justify-content: space-between;
+}
+.workList li{
+    flex-basis: 42%;
+    margin-bottom: 100px;
+}
+main ul li img{
+    width: 39vw;
+}
+main ul li img:hover, main li h3:hover{
+    opacity: 0.65; /* 45%ほど透明にする */
+}
+.workList li h3{
+    font-size: 1.5vw;
+    margin: 10px;
+    text-decoration: underline;
+}
+.workList li p{
+    font-size: 1.2vw;
+    margin-left: 10px;
+}

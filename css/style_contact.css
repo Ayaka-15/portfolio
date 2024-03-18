@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+/* Header(P162) */
+header{
+    background: url(../images/header_contact.jpg) no-repeat left center/cover;
+}
+h1{
+    position: absolute;
+    top: 46vh;
+    left: 43vw;
+    text-align: center;
+    font-size: 2.7vw;
+    letter-spacing : 0.07em;
+}
+h1 div{
+    font-size: 1.4vw;
+    margin-top: 10px;
+}
+/* Body */
+.innerWrap_contact{
+    width: 44.5vw;
+    /* margin: autoで端に余白が取られる */
+    margin: 0 auto;
+}
+h3{
+    text-align: center;
+    font-size: 1.6vw;
+    margin: 60px 0 40px;
+}
+input[type="text"],
+textarea{
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 4px 8px;
+}
+input[type="text"]{
+    height: 6.0vh;
+}
+textarea{
+    height: 20.0vh;
+}
+form label{
+    font-size: 1.4vw;
+}
+/* ボタンをmargin: auto;で中央寄せしたいのでpタグに入れてブロック要素にする */
+.contactButton{
+    width: 9.0vw;
+    margin: 1.0vw auto;
+}
+.sendButton{
+    color: #ffffff;
+    background-color: #C5A89F;
+    width: 9.0vw;
+    height: 9.5vh;
+    font-size: 1.5vw;
+    text-align: center;
+}
+.sendButton:hover{
+    background-color: #D8C5BF;
+}
+#messageArea{
+    position: relative;
+    height: 1.2vw;
+    margin-bottom: 4.0vw; 
+}
+#errMessage, #compMessage{
+    position: absolute;
+}
+
