@@ -7,18 +7,6 @@ header{
     background-color: #ffffff;
     background-position: center;
 }
-/* h1{
-    position: absolute;
-    top: 46vh;
-    left: 39vw;
-    text-align: center;
-    font-size: 2.7vw;
-    letter-spacing : 0.07em;
-}
-h1 div{
-    font-size: 1.4vw;
-    margin-top: 10px;
-} */
 /* Body */
 .innerWrap_detailWorks{
     width: 60vw;
@@ -48,7 +36,7 @@ h2{
 }
 video{
     position: absolute;
-    width: 26.9vw;
+    width: 26.8vw;
 }
 img{
     width: 59vw;
